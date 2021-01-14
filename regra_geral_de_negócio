@@ -1,0 +1,67 @@
+Fazer o projeto seguindo o seguinte menu:
+
+def menuPrincipal():
+print('-----------MENU---------')
+print('1 - Menu de Motorista')
+print('2 - Menu de Veiculo')
+print('3 - Menu de Viagem')
+print('4 - SAIR')
+
+
+'''
+# REGRAS MOTORISTAS
+1 - bdMotoristas só deverá ser acessada do arquivo controlador
+2 - Motorista será um dicionário com as chaves, cpf, nome e carteira.
+3 - Não poderá existir mais de um motorista com o mesmo CPF
+4 - A carteira só poderá ser as seguintes strings ('A' - 'B' - 'AB')
+'''
+
+def menuMotorista():
+print('-----------MENU MOTORISTAS---------')
+print('1 - Cadastrar Motorista')
+print('2 - Buscar Motorista por cpf')
+print('3 - Editar Nome do Motorista') #antes Buscar por cpf o motorista
+print('4 - Remover Motorista')
+print('5 - Listar Todos os Motorista por tipo da carteira') #perguntar antes qual tipo da carteira ('A' - 'B' - 'AB')
+print('6 - Listar Todos os Motorista')
+print('7 - SAIR')
+
+
+'''
+# REGRAS VEICULOS
+1 - bdVeiculos só deverá ser acessada do arquivo controlador
+2 - Veiculo será um dicionário com as chaves, placa, tipo e motorista:
+3 - Não pode ter dois veiculos com a mesma placa
+4 - O tipo deverá ser ('MOTO' ou 'CARRO')
+5 - O motorista inicialmente deverá ser None e depois que deverá referenciar com o motorista do bdMotoristas
+'''
+def menuVeiculo():
+print('-----------MENU---------')
+print('1 - Cadastrar Veiculo')
+print('2 - Buscar Veiculo por Placa')
+print('3 - Adicionar motorista ao veiculo')
+print('4 - Remover motorista do veiculo')
+print('5 - Listar veiculos com motoristas')
+print('6 - Listar veiculos sem motoristas')
+print('8 - Remover Veiculo')
+print('7 - SAIR')
+
+
+'''
+# REGRAS VIAGEM
+1 - bdViagens só deverá ser acessada do arquivo controlador
+2 - A Viagem será um dicionário com as veiculo, rota e status
+3 - Status deve ser True para quando criar uma viagem que entende que inicio e False para desativar a viagem, como se o carro estivesse chegado do destino. Não pode vincular um mesmo veiculo em outra viagem se tiver uma viagem com o mesmo veículo como True
+4 - Rota, uma string mesmo dizendo para onde ele vai.
+5 - O veiculo deverá ser pego do bdVeiculo.
+'''
+
+def menuViagem():
+print('-----------MENU---------')
+print('1 - Criar Viagem')
+print('2 - Finalizar Viagem por placa') - Aqui muda somente o status de True para False
+print('3 - Viagens Ativas')
+print('4 - Veiculos que estão em Viagem')
+print('5 - Veiculos que estão Disponíveis para Viagem')
+print('6 - Listar todas as viagens')
+print('7 - SAIR')
